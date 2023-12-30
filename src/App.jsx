@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getNews } from './api/getNews'
+import NavBar from './components/NavBar';
 
 
 export default function App() {
@@ -11,11 +12,12 @@ export default function App() {
   useEffect(() => {
     getNews(query, sortBy, setNews);
   }, [])
-  
+
   return (
-    <div className='text-3xl'>
-      <h1>News API</h1>
-      {news.map(i => { return <h2 key={i.title}>{i.title}</h2> })}
-    </div>
+    <>
+
+    <NavBar />
+    
+    </>
   )
 }
