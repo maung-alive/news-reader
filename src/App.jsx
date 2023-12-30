@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { getNews } from './api/getNews'
-import NavBar from './components/NavBar';
+import React, { useEffect, useState } from 'react';
+import { getNews } from './api/getNews';
+import Home from './pages/Home';
+import MainLayout from './layouts/MainLayout';
 
 
 export default function App() {
@@ -14,10 +15,8 @@ export default function App() {
   }, [])
 
   return (
-    <>
-
-    <NavBar />
-    
-    </>
+    <MainLayout>
+      <Home />
+    </MainLayout>
   )
 }
