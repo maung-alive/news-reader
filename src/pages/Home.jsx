@@ -20,7 +20,8 @@ export default function Home() {
   return (
     <>
       <Headings headlines={news} />
-      <HorizontalTextSlider data={sources} className='w-full md:w-[750px] lg:w-[1200px] px-10 py-4 no-scrollbar rounded-xl mx-auto my-4 bg-white' />
+      <HorizontalTextSlider data={sources} className='w-full md:w-[750px] lg:w-[1200px] px-10 py-4 no-scrollbar rounded-xl mx-auto my-4 bg-white ' />
+      <div className="h-[2000vh]"></div>
     </>
   )
 }
