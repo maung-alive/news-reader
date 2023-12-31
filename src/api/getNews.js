@@ -3,12 +3,11 @@ import axios from "axios";
 
 const apiKey = "72215eb6df5f4ea58b9b04c36350647e";
 
-const getNews = async (query, sortBy, setNews) => {
+const getHeadlines = async (query, setNews) => {
     try {
       const response = await axios.get("https://newsapi.org/v2/top-headlines", {
         params: {
-          q: query,
-          sortBy: sortBy,
+          ...query,
           apiKey: apiKey
       }})
       setNews(response.data.articles);
@@ -17,4 +16,4 @@ const getNews = async (query, sortBy, setNews) => {
     }
   }
 
-export { getNews };
+export { getHeadlines };
