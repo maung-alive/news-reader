@@ -5,7 +5,7 @@ const apiKey = "72215eb6df5f4ea58b9b04c36350647e";
 
 const getHeadlines = async (query, setNews) => {
     try {
-      const response = await axios.get("https://newsapi.org/v2/top-headlines", {
+      let response = await axios.get("https://newsapi.org/v2/top-headlines", {
         params: {
           ...query,
           apiKey: apiKey
@@ -14,6 +14,18 @@ const getHeadlines = async (query, setNews) => {
     } catch (error) {
       console.error(error);
     }
-  }
+}
 
-export { getHeadlines };
+const getSources = async (setSources) => {
+  try {
+    let response = await axios.get("https://newsapi.org/v2/top-headlines/sources", {
+      params: {
+        apiKey
+      }
+    })
+    setSources(response.data.sources);
+  } catch (error) {
+    console.log(error)
+  }
+}
+export { getHeadlines, getSources };
