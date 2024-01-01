@@ -28,4 +28,19 @@ const getSources = async (setSources) => {
     console.log(error)
   }
 }
-export { getHeadlines, getSources };
+
+const getEverything = async (query, setSources, limit=5) => {
+  try {
+    let response = await axios.get("https://newsapi.org/v2/everything", {
+      params: {
+        ...query,
+        apiKey: apiKey
+      }
+    })
+    setSources(response.data.articles.slice(0,5));
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export { getHeadlines, getSources, getEverything };

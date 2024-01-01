@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Item = ({data}) => {
-  console.log(data?.urlToImage)
   return (
     <div className="w-full h-full rounded-2xl overflow-hidden relative bg-gray-400">
       <img src={data?.urlToImage} alt={data?.title} className="w-full h-full object-cover" />
