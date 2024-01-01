@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Home from './pages/Home';
 import MainLayout from './layouts/MainLayout';
+import Router from './Router';
 
 
 export default function App() {
-
   return (
     <MainLayout>
-      <Home />
+      <Router />
     </MainLayout>
   )
 }
