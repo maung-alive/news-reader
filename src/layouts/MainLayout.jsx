@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
+import Subscription from '../components/Subscription'
 
 export default function MainLayout({ children }) {
   return (
@@ -7,6 +8,8 @@ export default function MainLayout({ children }) {
         <NavBar />
 
         {children}
+
+        <Subscription />
     </div>
   )
 }
