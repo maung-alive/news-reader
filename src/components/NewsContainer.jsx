@@ -28,7 +28,7 @@ export default function NewsContainer({className, title, query}) {
             </div>
             <div className="grid grid-rows-4 items-stretch gap-y-2">
                 {news.slice(1, 5).map(news => 
-                    <div className="flex w-full h-auto bg-slate-100 overflow-hidden relative rounded-md">
+                    <div className="flex w-full h-auto overflow-hidden relative rounded-md">
                         <span className="absolute bottom-0 left-0 font-medium bg-[rgba(255,255,255,0.5)] text-red-700"> {news.source.name}</span>
                         <img src={news?.urlToImage} alt={news?.title} className='w-40 min-w-40 md:min-w-32 md:w-32 lg:min-w-40 lg:w-40 h-full object-cover bg-gray-400' />
                         <div className="w-full p-2 relative">
