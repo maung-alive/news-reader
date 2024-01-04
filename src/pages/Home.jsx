@@ -40,7 +40,6 @@ export default function Home() {
           }}
         />
       )}
-      <div className="h-[2000vh]"></div>
     </>
   )
 }

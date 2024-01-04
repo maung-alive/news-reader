@@ -2,6 +2,7 @@ import React from 'react'
 import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import News from './pages/News';
+import Category from './pages/Category';
 
 const router = createBrowserRouter([
     {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
     {
         path: "/news/:title",
         element: <News />
+    },
+    {
+        path: "/category/:name",
+        element: <Category />
     }
 ]);
 
