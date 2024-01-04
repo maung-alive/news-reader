@@ -1,7 +1,48 @@
 import React from 'react'
 import { FaCalendarAlt, FaFacebook, FaFacebookF, FaLinkedin, FaShare, FaShareAlt, FaShareAltSquare, FaTwitter, FaUser } from 'react-icons/fa';
+import RelatedNews from '../components/RelatedNews';
+import SideRelated from '../components/SideRelated';
 
-export default function News({data}) {
+function ShareBtns() {
+    return (
+        <div className="flex justify-start gap-x-3 items-center my-4">
+            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
+                <div className="group-hover:bg-cyan-700 bg-cyan-600 px-2 py-1">
+                    <FaTwitter className='text-xl' />
+                </div>
+                <div className="group-hover:bg-cyan-500 bg-cyan-400 p-1 font-medium text-sm">
+                    Twitter
+                </div>
+            </div>
+            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
+                <div className="group-hover:bg-blue-700 bg-blue-600 px-2 py-1">
+                    <FaFacebookF className='text-xl' />
+                </div>
+                <div className="group-hover:bg-blue-500 bg-blue-400 p-1 font-medium text-sm">
+                    Facebook
+                </div>
+            </div>
+            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
+                <div className="group-hover:bg-indigo-700 bg-indigo-600 px-2 py-1">
+                    <FaLinkedin className='text-xl' />
+                </div>
+                <div className="group-hover:bg-indigo-500 bg-indigo-400 p-1 font-medium text-sm">
+                    Linkedin
+                </div>
+            </div>
+            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
+                <div className="group-hover:bg-red-700 bg-red-600 px-2 py-1">
+                    <FaShareAlt className='text-xl' />
+                </div>
+                <div className="group-hover:bg-red-500 bg-red-400 p-1 font-medium text-sm">
+                    Share
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default function News({ data }) {
     let sample_img = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6I8fLfY-g3YLU9G6EpHshxGedvA06mfQC3iZwbjrZHSulq3E4XioWUjgEriajsPNdy7Ys2G72VcIqcWNf5aygYROT6Ukcymot0GQCluzkdnr04ZI07ymwWhRvZIrFWbuhBH1yHmTtZVrq-IREDdW8lEb7AVXZb77xAntYc2jra2Q1Kb6dKMHEZqzIEF00/s728-rw-ft-e30/ssh.jpg";
 
     return (
@@ -53,120 +94,19 @@ export default function News({data}) {
 
                         Found this article interesting? Follow us on Twitter  and LinkedIn to read more exclusive content we post.
 
-                        <div className="flex justify-start gap-x-3 items-center my-4">
-                            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
-                                <div className="group-hover:bg-cyan-700 bg-cyan-600 px-2 py-1">
-                                    <FaTwitter className='text-xl' />
-                                </div>
-                                <div className="group-hover:bg-cyan-500 bg-cyan-400 p-1 font-medium text-sm">
-                                    Twitter
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
-                                <div className="group-hover:bg-blue-700 bg-blue-600 px-2 py-1">
-                                    <FaFacebookF className='text-xl' />
-                                </div>
-                                <div className="group-hover:bg-blue-500 bg-blue-400 p-1 font-medium text-sm">
-                                    Facebook
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
-                                <div className="group-hover:bg-indigo-700 bg-indigo-600 px-2 py-1">
-                                    <FaLinkedin className='text-xl' />
-                                </div>
-                                <div className="group-hover:bg-indigo-500 bg-indigo-400 p-1 font-medium text-sm">
-                                    Linkedin
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-[1fr_2fr] items-center text-white rounded-sm overflow-hidden group hover:rounded-md hover:translate-y-0.5 duration-200">
-                                <div className="group-hover:bg-red-700 bg-red-600 px-2 py-1">
-                                    <FaShareAlt className='text-xl' />
-                                </div>
-                                <div className="group-hover:bg-red-500 bg-red-400 p-1 font-medium text-sm">
-                                    Share
-                                </div>
-                            </div>
-                        </div>
-
+                        
+                        <ShareBtns />
                     </div>
                 </div>
 
                 <div className="w-full pl-8">
-                    <p className="text-2xl font-medium pb-4">Related</p>
-
-                    <div className="w-full h-20 flex cursor-pointer">
-                        <img
-                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiviQL2b0_ZKJdSKQ8cyKPSKh7FLULEJBNgJliL_BrgvNK8TPDxTFSOU7VPfvQTJCu0Fl_PfYd1B0532LhK84369dh_7NO4OOFJLOVuBhGGrhTVla6tWioIeRfRf-Vp5pGBl7pzIvfh3SkgeXd87Up3lTtE0__Hdw15CuqHuZGDHgobWY4M1imVDuC88_E/w72-h72-p-k-no-nu/pentera.jpg"
-                            alt="Blah Blah"
-                            className='h-full w-auto rounded-md object-cover'
-                        />
-                        <p className="hover:text-blue-600 text-md font-bold pl-2">
-                            Why Defenders Should Embrace a Hacker Mindset
-                        </p>
-                    </div>
+                    <SideRelated />
                 </div>
 
 
             </div>
 
-            <div className="w-full mt-10">
-                <p className="text-3xl font-bold">Just In Time</p>
-                <div className="grid grid-cols-4 gap-x-7 my-5">
-                    <div className="w-full cursor-pointer hover:scale-105 duration-100">
-                        <img
-                            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_lky_o_-IjMjLb2rlCcXj59FQIi6Zdfo1l3WljKBlfn-BJH1Td3lJxlfmWk2WiJx5TOgtyiPNueoYJUtEaid04WjKlARvZROqonutLM_1F1tYPhrCrRKC9eZhV1N4u0_tuvA_XrGP7Mio7Frx0OuJZTF2WoGcfYB26BU6sLU-LdKsNVUGiIFVzHQolNk/s260-rw-ft-e30/browsser.jpg'
-                            alt='...'
-                            className='w-full h-auto rounded-xl object-cover'
-                        />
-                        <div className="mt-2">
-                            <p className="text-xl font-medium hover:text-blue-600 active:text-red-600 leading-8">Enterprise Browser Guide Ball in your eye!</p>
-                            <p className="text-sm leading-6">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aspernatur molestiae, mollitia magni repellendus sunt sint 
-                            </p>
-                        </div>
-                    </div>
-                    <div className="w-full cursor-pointer hover:scale-105 duration-100">
-                        <img
-                            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_lky_o_-IjMjLb2rlCcXj59FQIi6Zdfo1l3WljKBlfn-BJH1Td3lJxlfmWk2WiJx5TOgtyiPNueoYJUtEaid04WjKlARvZROqonutLM_1F1tYPhrCrRKC9eZhV1N4u0_tuvA_XrGP7Mio7Frx0OuJZTF2WoGcfYB26BU6sLU-LdKsNVUGiIFVzHQolNk/s260-rw-ft-e30/browsser.jpg'
-                            alt='...'
-                            className='w-full h-auto rounded-xl object-cover'
-                        />
-                        <div className="mt-2">
-                            <p className="text-xl font-medium hover:text-blue-600 active:text-red-600 leading-8">Enterprise Browser Guide Ball in your eye!</p>
-                            <p className="text-sm leading-6">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aspernatur molestiae, mollitia magni repellendus sunt sint
-                            </p>
-                        </div>
-                    </div>
-                    <div className="w-full cursor-pointer hover:scale-105 duration-100">
-                        <img
-                            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_lky_o_-IjMjLb2rlCcXj59FQIi6Zdfo1l3WljKBlfn-BJH1Td3lJxlfmWk2WiJx5TOgtyiPNueoYJUtEaid04WjKlARvZROqonutLM_1F1tYPhrCrRKC9eZhV1N4u0_tuvA_XrGP7Mio7Frx0OuJZTF2WoGcfYB26BU6sLU-LdKsNVUGiIFVzHQolNk/s260-rw-ft-e30/browsser.jpg'
-                            alt='...'
-                            className='w-full h-auto rounded-xl object-cover'
-                        />
-                        <div className="mt-2">
-                            <p className="text-xl font-medium hover:text-blue-600 active:text-red-600 leading-8">Enterprise Browser Guide Ball in your eye!</p>
-                            <p className="text-sm leading-6">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aspernatur molestiae, mollitia magni repellendus sunt sint
-                            </p>
-                        </div>
-                    </div>
-                    <div className="w-full cursor-pointer hover:scale-105 duration-100">
-                        <img
-                            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_lky_o_-IjMjLb2rlCcXj59FQIi6Zdfo1l3WljKBlfn-BJH1Td3lJxlfmWk2WiJx5TOgtyiPNueoYJUtEaid04WjKlARvZROqonutLM_1F1tYPhrCrRKC9eZhV1N4u0_tuvA_XrGP7Mio7Frx0OuJZTF2WoGcfYB26BU6sLU-LdKsNVUGiIFVzHQolNk/s260-rw-ft-e30/browsser.jpg'
-                            alt='...'
-                            className='w-full h-auto rounded-xl object-cover'
-                        />
-                        <div className="mt-2">
-                            <p className="text-xl font-medium hover:text-blue-600 active:text-red-600 leading-8">Enterprise Browser Guide Ball in your eye!</p>
-                            <p className="text-sm leading-6">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aspernatur molestiae, mollitia magni repellendus sunt sint
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <RelatedNews />
         </div>
     )
 }
