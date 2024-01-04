@@ -7,7 +7,7 @@ export default function Subscription() {
         style={{
             boxShadow: ' -17px 17px 0px 0px rgba(109,105,14,0.75)'
         }}
-        className='w-9/12 px-8 py-6 bg-blue-600 rounded-ee-3xl rounded-e-lg rounded-ss-3xl rounded-s-lg mx-auto'
+        className='w-9/12 px-8 py-6 my-16 bg-blue-600 rounded-ee-3xl rounded-e-lg rounded-ss-3xl rounded-s-lg mx-auto'
     >
         <p className="text-4xl font-medium text-white text-center">
             Subscribe For Free
