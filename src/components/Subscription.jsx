@@ -5,7 +5,7 @@ export default function Subscription() {
   return (
     <div
         style={{
-            boxShadow: '-17px 17px 0px 0px rgba(109,105,14,0.75)'
+            boxShadow: '-17px 17px 0px 0px rgba(109,105,14,0.75), -10px 10px 10px -2px rgba(209,205,114,0.3)'
         }}
         className='w-9/12 px-8 py-6 my-16 bg-blue-600 rounded-ee-xl md:rounded-ee-3xl rounded-e-sm md:rounded-e-lg rounded-ss-xl md:rounded-ss-3xl rounded-s-sm md:rounded-s-lg mx-auto'
     >
